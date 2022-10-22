@@ -110,6 +110,13 @@ console.log(resultadoDePartida);
 // 3- A su vez debe mostrar al usuario una alerta con el resutado de la partida.
 // 4- Finalmente, si el resultado fue una derrota debe mostrarle al usuario un mensaje de aliento para desearle suerte en la próxima oportunidad.
 
+/* -------------------------------------------------------------------------- */
+/*                   CONSIGNA MESA DE TRABAJO (HOY)                           */
+/* -------------------------------------------------------------------------- */
+// 1- Modificar el objeto puntajes para poder contabilizar los empates tambien.
+// 2- Modificar el bucle para poder sumar tambien la cantidad de empates.
+// 3- Mostrarle al usuario quien fue el ganador final (el mejor de 3 rondas).
+
 function anunciarResultado() {
   let puntajes = {
     usuario: 0,
@@ -157,6 +164,11 @@ function anunciarResultado() {
 
 anunciarResultado();
 
+/* -------------------------------------------------------------------------- */
+/*                                  PLUS (HOY)                                */
+/* -------------------------------------------------------------------------- */
+// 1- Se agrega la posibilidad de seguir jugando.
+
 const nuevaPartida = () => {
   let nuevoJuego = confirm("¿Quiere volver a jugar");
   if (nuevoJuego) {
@@ -166,10 +178,3 @@ const nuevaPartida = () => {
 };
 
 nuevaPartida();
-
-/* -------------------------------------------------------------------------- */
-/*                   CONSIGNA MESA DE TRABAJO (HOY)                           */
-/* -------------------------------------------------------------------------- */
-// 1- Modificar el objeto puntajes para poder contabilizar los empates tambien.
-// 2- Modificar el bucle para poder sumar tambien la cantidad de empates.
-// 3- Mostrarle al usuario quien fue el ganador final (el mejor de 3 rondas).
