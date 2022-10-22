@@ -139,17 +139,33 @@ function anunciarResultado() {
     );
     console.log(puntajes);
   }
-  if (puntajes.usuario == 3) {
-    alert("Felicitaciones!!! Fuiste el ganador de las 3 rondas");
-  }
-  if (puntajes.computadora == 3) {
-    alert(
-      "El ganador de las 3 rondas fue la computadora. La proxima puede ser tuya!!!!"
-    );
-  }
+
+  const mensajeFinal = () => {
+    if (puntajes.usuario == 3) {
+      alert(
+        `Felicitaciones ${nombreJugador}!!! Fuiste el ganador de las 3 rondas`
+      );
+    }
+    if (puntajes.computadora == 3) {
+      alert(
+        "El ganador de las 3 rondas fue la computadora. La proxima puede ser tuya!!!!"
+      );
+    }
+  };
+  mensajeFinal();
 }
 
 anunciarResultado();
+
+const nuevaPartida = () => {
+  let nuevoJuego = confirm("¿Quiere volver a jugar");
+  if (nuevoJuego) {
+    pedirJugada();
+  }
+  anunciarResultado();
+};
+
+nuevaPartida();
 
 /* -------------------------------------------------------------------------- */
 /*                   CONSIGNA MESA DE TRABAJO (HOY)                           */
